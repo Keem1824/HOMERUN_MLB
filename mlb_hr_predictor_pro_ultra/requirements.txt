@@ -5,4 +5,4 @@ streamlit
 python-dotenv
 pybaseball
 joblib
-git+https://github.com/toddrob99/MLB-StatsAPI.git
+git + https://github.com/toddrob99/MLB-StatsAPI.git
