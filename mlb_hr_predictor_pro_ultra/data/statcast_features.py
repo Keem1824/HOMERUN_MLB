@@ -3,8 +3,8 @@ from pybaseball import statcast_batter
 from datetime import datetime, timedelta
 
 def get_batter_features(player_id):
-    end = datetime.now()
-    start = end - timedelta(days=60)
+    end = datetime.now().strftime("%Y-%m-%d")
+    start = (datetime.now() - timedelta(days=60)).strftime("%Y-%m-%d")
     df = statcast_batter(start, end, player_id)
     df = df.dropna(subset=['launch_speed', 'launch_angle'])
     if df.empty:
